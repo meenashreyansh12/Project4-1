@@ -34,9 +34,9 @@ sudo mv /tmp/eksctl /usr/local/bin
 create eks cluster with command 
 --------------------------------
 
-		eksctl create cluster --name mycluster --node-type t2.large --nodes 3 --region us-east-2
+		eksctl create cluster --name meena-cluster --node-type t2.large --nodes 3 --region us-east-1
 	
-* Created cluster with 3 machines in Ohio region from the above command 
+* Created cluster with 3 machines in North Virigina region from the above command 
 * After cluster creation, to login into cluster it needs a plugin called "aws-iam-authenticator pluggin" 
 	
 		curl -Lo aws-iam-authenticator https://github.com/kubernetes-sigs/aws-iam-authenticator/releases/download/v0.6.11/aws-iam-authenticator_0.6.11_linux_amd64
@@ -52,23 +52,23 @@ To check Nodes
 
 >To delete cluster
 	
-	eksctl delete cluster mycluster 
-	eksctl delete cluster mycluster --region us-east-2
+	eksctl delete cluster meena-cluster 
+	eksctl delete cluster meena-cluster --region us-east-1
 
 >syntax of cluster creation
 
-		eksctl create cluster --name mycluster --region=us-east-2 --node-type=<node-instance-type> --nodes=<number-of-nodes>
+		eksctl create cluster --name meena-cluster --region=us-east-1 --node-type=<node-instance-type> --nodes=<number-of-nodes>
 
 > cluster creation command
 
-		eksctl create cluster --name mycluster --region=us-east-2 --node-type=t2.large --nodes=3
+		eksctl create cluster --name meena-cluster --region=us-east-1 --node-type=t2.medium --nodes=3
 
 >cluster deletion
 
-		eksctl delete cluster --name mycluster --region=us-east-2
+		eksctl delete cluster --name meena-cluster --region=us-east-1
   * Configuring of YAML files for kubernetes deployment
   * create deployment manifest file
-  * 
+    
   
 
 
